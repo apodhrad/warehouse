@@ -31,7 +31,7 @@ public class WarehouseServiceBean implements WarehouseService {
 				return Response.ok(item).build();
 			}
 		}
-		return Response.status(404).build();
+		return Response.ok(new ErrorMessage()).build();
 	}
 
 	@Override
@@ -43,6 +43,24 @@ public class WarehouseServiceBean implements WarehouseService {
 				+ "<h3>Get an item:</h3>"
 				+ "<a href=\"http://localhost:8080/warehouse/items/ITEM001\">http://localhost:8080/warehouse/items/ITEM001</a>"
 				+ "</html>";
+	}
+
+	private class ErrorMessage {
+
+		private String message;
+
+		public ErrorMessage() {
+			message = "Item not found";
+		}
+
+		public String getMessage() {
+			return message;
+		}
+
+		public void setMessage(String message) {
+			this.message = message;
+		}
+
 	}
 
 }
