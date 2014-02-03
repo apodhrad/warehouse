@@ -3,7 +3,7 @@ package com.example.switchyard.warehouse;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.ws.rs.WebApplicationException;
+import javax.ws.rs.core.Response;
 
 import org.switchyard.component.bean.Service;
 
@@ -25,13 +25,13 @@ public class WarehouseServiceBean implements WarehouseService {
 	}
 
 	@Override
-	public Item getItem(String id) {
+	public Response getItem(String id) {
 		for (Item item : items) {
 			if (item.getItemId().equals(id)) {
-				return item;
+				return Response.ok(item).build();
 			}
 		}
-		throw new WebApplicationException(404);
+		return Response.status(404).build();
 	}
 
 }
