@@ -11,6 +11,11 @@ import javax.ws.rs.core.Response;
 
 @Path("/")
 public interface WarehouseService {
+	
+	@GET
+	@Path("/")
+	@Produces(MediaType.TEXT_HTML)
+	public String getInfo();
 
 	@GET
 	@Path("/items")

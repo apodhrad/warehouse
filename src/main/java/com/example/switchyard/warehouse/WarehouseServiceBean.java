@@ -34,4 +34,15 @@ public class WarehouseServiceBean implements WarehouseService {
 		return Response.status(404).build();
 	}
 
+	@Override
+	public String getInfo() {
+		return "<html>"
+				+ "<h1>Warehouse REST API</h1>"
+				+ "<h3>Get all items:</h3>"
+				+ "<a href=\"http://localhost:8080/warehouse/items\">http://localhost:8080/warehouse/items</a>"
+				+ "<h3>Get an item:</h3>"
+				+ "<a href=\"http://localhost:8080/warehouse/items/ITEM001\">http://localhost:8080/warehouse/items/ITEM001</a>"
+				+ "</html>";
+	}
+
 }
