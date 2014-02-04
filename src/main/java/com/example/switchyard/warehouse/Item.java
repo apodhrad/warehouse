@@ -10,14 +10,14 @@ public class Item {
 
 	private String itemId;
 	private String description;
-	private double prize;
+	private int quantity;
 
-	public Item(String id, String description, double prize) {
+	public Item(String id, String description, int quantity) {
 		this.itemId = id;
 		this.description = description;
-		this.prize = prize;
+		this.quantity = quantity;
 	}
-	
+
 	public String getItemId() {
 		return itemId;
 	}
@@ -34,17 +34,17 @@ public class Item {
 		this.description = description;
 	}
 
-	public double getPrize() {
-		return prize;
+	public int getQuantity() {
+		return quantity;
 	}
 
-	public void setPrize(double prize) {
-		this.prize = prize;
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
 	}
 
 	@Override
 	public String toString() {
-		return "Item: " + description + "(" + itemId + "); prize: " + prize;
+		return "Item: " + description + "(" + itemId + "); quantity: " + quantity;
 	}
 
 }

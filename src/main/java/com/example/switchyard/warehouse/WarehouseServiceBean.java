@@ -14,9 +14,9 @@ public class WarehouseServiceBean implements WarehouseService {
 
 	public WarehouseServiceBean() {
 		items = new ArrayList<Item>();
-		items.add(new Item("ITEM001", "Item 001", 129.9));
-		items.add(new Item("ITEM002", "Item 002", 99.9));
-		items.add(new Item("ITEM003", "Item 003", 1199.9));
+		items.add(new Item("ITEM001", "Item 001", 7));
+		items.add(new Item("ITEM002", "Item 002", 23));
+		items.add(new Item("ITEM003", "Item 003", 29));
 	}
 
 	@Override
